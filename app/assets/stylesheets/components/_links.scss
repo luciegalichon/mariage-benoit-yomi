@@ -72,11 +72,11 @@
 
   &-green {
     a {
-      background-color: $green !important;
+      background-color: $blue !important;
       &:hover {
         text-decoration: none;
         background-color: white !important;
-        color: $green;
+        color: $blue;
       }
     }
   }
@@ -135,13 +135,13 @@
   &-green {
 
     a {
-      color: $green !important;
-      border: 1px solid $green !important;
+      color: $blue !important;
+      border: 1px solid $blue !important;
       &:hover {
         text-decoration: none;
-        background-color: $green !important;
+        background-color: $blue !important;
         color: white !important;
-        border: 1px solid $green !important;
+        border: 1px solid $blue !important;
       }
     }
   }

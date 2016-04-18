@@ -1,14 +1,14 @@
 <div class="navbar-wagon navbar-wagon-fixed navbar-wagon-height ">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "tampon-rose.png" %>
+    <%= image_tag "logo.png" %>
   <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
    <hr class="hidden-xs hidden-sm">
-    <a href="/" class="navbar-wagon-item navbar-wagon-link">Géraldine et Jean</a>
+    <a href="/" class="navbar-wagon-item navbar-wagon-link">Yomi et Ben</a>
     <hr class="hidden-xs hidden-sm">
     <a href="<%=mariage_path%> " class="navbar-wagon-item navbar-wagon-link">Lieux du mariage</a>
     <hr class="hidden-xs hidden-sm">
@@ -52,13 +52,13 @@
   <div class="container navbar-wagon-container navbar-wagon-fixed navbar-wagon-height margin-bottom-180 hidden-xs hidden-sm">
 
     <a href="/">
-      <%= image_tag 'tampon-rose.png', class: "navbar-wagon-logo" %>
+      <%= image_tag 'logo.png', class: "navbar-wagon-logo" %>
     </a>
 
     <div class="navbar-wagon-pusher hidden-xs hidden-sm"></div>
 
     <hr class="hidden-xs hidden-sm">
-    <a href="/" class="navbar-wagon-item navbar-wagon-link">Géraldine et Jean</a>
+    <a href="/" class="navbar-wagon-item navbar-wagon-link">Yomi et Ben</a>
     <hr class="hidden-xs hidden-sm">
     <a href="<%=mariage_path%> " class="navbar-wagon-item navbar-wagon-link">Lieux du mariage</a>
     <hr class="hidden-xs hidden-sm">
@@ -104,14 +104,14 @@
 
           if ( $(window).scrollTop() >= 100 ) {
             $('.navbar-wagon-height').css("height", 70)
-            $('a.navbar-wagon-brand img').css("height", 50)
+            $('a.navbar-wagon-brand img').css("height", 30)
             $('a.navbar-wagon-brand img').css("width", 50)
 
           };
 
           if ($(window).scrollTop() < 100) {
             $('.navbar-wagon-height').css("height", 180)
-            $('a.navbar-wagon-brand img').css("height", 150)
+            $('a.navbar-wagon-brand img').css("height", 95)
             $('a.navbar-wagon-brand img').css("width", 150)
 
           };
@@ -125,7 +125,7 @@
     $(function() {
       if ($(window).width() <= 768) {
           $('.navbar-wagon-height').css("height", 70)
-          $('a.navbar-wagon-brand img').css("height", 50)
+          $('a.navbar-wagon-brand img').css("height", 30)
           $('a.navbar-wagon-brand img').css("width", 50)
       };
     });

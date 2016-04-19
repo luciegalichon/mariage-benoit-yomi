@@ -25,12 +25,13 @@
         </div>
 
         <% Lieu.all.each do |l| %>
-        <% url = l.url %>
           <% if l.genre == g %>
             <div class="col-sm-12 col-md-6 col-lg-4">
-              <a href=<%=url%> target="_blank">
+              <% if l.url %>
+                <a href=<%=url%> target="_blank">
+              <% end %>
                   <div class="card">
-                  <div class="card-text">
+                  <div class="card-text text-white">
                     <p class="title text-center"><strong><%= l.name %></strong></p>
                     <p class="title text-center"><%= l.city %></p>
                     <p class="title text-center"><%= l.url %></p>

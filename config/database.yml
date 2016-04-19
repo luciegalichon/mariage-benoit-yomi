@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: mariage-geraldine-jean_development
+  database: mariage-benoit-yomi_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: mariage-geraldine-jean
+  #username: mariage-benoit-yomi
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: mariage-geraldine-jean_test
+  database: mariage-benoit-yomi_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: mariage-geraldine-jean_production
-  username: mariage-geraldine-jean
-  password: <%= ENV['MARIAGE-GERALDINE-JEAN_DATABASE_PASSWORD'] %>
+  database: mariage-benoit-yomi_production
+  username: mariage-benoit-yomi
+  password: <%= ENV['mariage-benoit-yomi_DATABASE_PASSWORD'] %>

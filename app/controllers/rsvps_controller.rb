@@ -10,7 +10,7 @@ def create
 
     if @rsvp.save
       respond_to do |format|
-        format.html { redirect_to root_path }
+        format.html { flash.now[:notice] = "Merci pour votre confirmation !"}
         format.js  # <-- will render `app/views/covoiturages/create.js.erb`
       end
     else

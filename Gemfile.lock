@@ -128,6 +128,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.5)
       sprockets-rails
+    rails-assets-countdown (2.1.0)
+      rails-assets-jQuery (>= 1.7.2)
+    rails-assets-jQuery (2.2.4)
     rails-assets-jquery (2.1.4)
     rails-assets-lightbox (2.8.1)
       rails-assets-jquery (~> 2)
@@ -214,6 +217,7 @@ DEPENDENCIES
   puma
   quiet_assets
   rails (= 4.2.5)
+  rails-assets-countdown!
   rails-assets-lightbox!
   rails-assets-slick.js!
   rails-assets-smoothscroll!

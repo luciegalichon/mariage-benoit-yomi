@@ -61,22 +61,22 @@
   }
   &-blue {
     a {
-      background-color: $blue !important;
+      background-color: $brand-color !important;
       &:hover {
         text-decoration: none;
         background-color: white !important;
-        color: $blue !important;
+        color: $brand-color !important;
       }
     }
   }
 
   &-green {
     a {
-      background-color: $blue !important;
+      background-color: $brand-color !important;
       &:hover {
         text-decoration: none;
         background-color: white !important;
-        color: $blue;
+        color: $brand-color;
       }
     }
   }
@@ -121,13 +121,13 @@
   }
   &-blue {
     a {
-      color: $blue;
-      border: 1px solid $blue !important;
+      color: $brand-color;
+      border: 1px solid $brand-color !important;
       &:hover {
         text-decoration: none;
-        background-color: $blue !important;
+        background-color: $brand-color !important;
         color: white !important;
-        border: 1px solid $blue !important;
+        border: 1px solid $brand-color !important;
       }
     }
   }
@@ -135,13 +135,13 @@
   &-green {
 
     a {
-      color: $blue !important;
-      border: 1px solid $blue !important;
+      color: $brand-color !important;
+      border: 1px solid $brand-color !important;
       &:hover {
         text-decoration: none;
-        background-color: $blue !important;
+        background-color: $brand-color !important;
         color: white !important;
-        border: 1px solid $blue !important;
+        border: 1px solid $brand-color !important;
       }
     }
   }

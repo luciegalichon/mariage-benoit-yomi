@@ -22,7 +22,6 @@
 /* Navbar logo */
 .navbar-wagon-brand img {
   width: 150px;
-  height: 150px;
 
 }
 
@@ -47,7 +46,7 @@
 /* Navbar standard link */
 .navbar-wagon-link {
   color: #616668;
-  font-size: 14px;
+  font-size: 20px;
 }
 .navbar-wagon-link:hover {
   color: #da552f;
@@ -62,7 +61,7 @@
   line-height: 40px;
   background-color: #D23333;
   color: white;
-  font-size: 14px;
+  font-size: 20px;
   border: 2px solid #D23333;
 }
 .navbar-wagon-button:hover {
@@ -156,7 +155,7 @@
 //   &-container {
 //     display: flex;
 //     align-items: center;
-//     border-bottom: 2px solid $blue;
+//     border-bottom: 2px solid $brand-color;
 //   }
 //   &-height {
 //    height: 180px;
@@ -205,7 +204,7 @@
 //     color: #616668;
 //     font-size: 14px;
 //     &:hover {
-//       color: $blue;
+//       color: $brand-color;
 //       text-decoration: none;
 //     }
 //   }

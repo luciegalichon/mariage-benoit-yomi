@@ -1,6 +1,9 @@
 class MariagesController < ApplicationController
   def home
-    @photos = ["gegejean1.jpg","gegejean2.jpg","gegejean3.jpg","gegejean4.jpg","gegejean5.jpg","gegejean6.jpg","gegejean10.jpg","gegejean11.jpg" ]
+
+    @rsvp = Rsvp.new
+
+    @photos = ["benyomi.jpeg","benyomi2.jpeg","benyomi3.jpeg","benyomi4.jpeg","benyomi5.jpeg","benyomi6.jpeg"]
   end
 
   def about
@@ -13,5 +16,9 @@ class MariagesController < ApplicationController
   end
 
   def liste
+  end
+
+  def rsvp
+    @rsvp = Rsvp.new
   end
 end

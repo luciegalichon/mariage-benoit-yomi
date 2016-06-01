@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   end
 
+  resources :rsvps
+
   get 'rsvp' => 'mariages#rsvp'
+
+  get 'ballade' => 'mariages#ballade'
 
   get 'lieux' => 'lieus#index', as: "lieux"
 

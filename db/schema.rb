@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160205152146) do
+ActiveRecord::Schema.define(version: 20160601101939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,18 @@ ActiveRecord::Schema.define(version: 20160205152146) do
   end
 
   add_index "reviews", ["covoiturage_id"], name: "index_reviews_on_covoiturage_id", using: :btree
+
+  create_table "rsvps", force: :cascade do |t|
+    t.string   "nom"
+    t.string   "mail"
+    t.string   "prenom"
+    t.string   "musique"
+    t.integer  "nbpers"
+    t.text     "commentaire"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.boolean  "oui"
+  end
 
   add_foreign_key "reviews", "covoiturages"
 end

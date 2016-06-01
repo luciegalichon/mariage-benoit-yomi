@@ -110,11 +110,11 @@
     z-index: 0;
   }
   &-blue{
-    background: $blue;
+    background: $brand-color;
     z-index: 0;
   }
   &-green{
-    background: $blue;
+    background: $brand-color;
     z-index: 0;
   }
   &-grey{
@@ -136,12 +136,12 @@
     z-index: 1;
   }
   &-blue-gradient {
-    background-color: $blue; //$brand-color;
+    background-color: $brand-color; //$brand-color;
     opacity: 0.2;
     z-index: 1;
   }
   &-green-light{
-    background: $blue;
+    background: $brand-color;
     z-index: 0;
     opacity: 0.8;
   }
@@ -170,7 +170,7 @@
     z-index: 0;
   }
   &-pink {
-    background: $blue;
+    background: $brand-color;
     z-index: 0;
   }
 }

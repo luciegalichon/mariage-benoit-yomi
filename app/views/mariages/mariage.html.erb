@@ -1,25 +1,3 @@
-<div class="banner-transition text-center" style="background-image: url('<%= image_path "fond2.png" %>')">
-</div>
-
-<div class="bg-pink">
-  <div class="container max-width">
-    <div class="row padding-top-20 padding-bottom-20 text-center">
-      <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <div class="padding-top-20 padding-bottom-20">
-          <h1 class="text-center padding-top-20 padding-bottom-20 text-white"> La mairie </h1>
-        </div>
-        <div>
-           <%= link_to("https://www.google.fr/maps/place/5+Place+de+la+Mairie,+71150+Cheilly-l%C3%A8s-Maranges/@46.8968381,4.6667833,17z/data=!3m1!4b1!4m2!3m1!1s0x47f259cd330e8187:0x672777cd2e563619", html_options = { target: :_blank}) do %>
-        <%= image_tag("mairie.JPG", class: "img-responsive img-thumbnail img-rounded")%>
-        <%end%>
-        </div>
-        <div class="padding-top-20 padding-bottom-20 text-center">
-         <p> Adresse : ? </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="banner-transition text-center" style="background-image: url('<%= image_path "fond2.png" %>')">
 </div>
@@ -27,13 +5,19 @@
 <div class="container max-width">
   <div class="row padding-top-20 padding-bottom-20">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <h1 class="text-center padding-top-20 padding-bottom-20">La cérémonie </h1>
-       <%= link_to("https://www.google.fr/maps/place/12+Rue+des+Halles,+71150+Chagny/data=!4m2!3m1!1s0x47f2f7af84a178e3:0xd206f200c17f1caa?sa=X&ved=0ahUKEwj2z-W3_JXLAhVCfhoKHQCpC28Q8gEIHDAA", html_options = { target: :_blank}) do %>
+      <h1 class="text-center padding-top-20 padding-bottom-20">Rendez-vous à Sarnac le samedi à partir de 15h </h1>
+       <%= link_to("https://www.google.fr/maps/place/Sarnac,+09120/@42.9833183,1.7463246,16z/data=!4m5!3m4!1s0x12af0f345995451b:0x1a732bff1ef09cc1!8m2!3d42.983586!4d1.751217", html_options = { target: :_blank}) do %>
         <div class="text-center">
        <%= image_tag("sarnac.jpg", class: "img-responsive img-thumbnail img-rounded")%>
         </div>
        <%end%>
+      <div class="padding-top-20 padding-bottom-20 text-center">
+         <p> La journée du samedi se déroulera à Sarnac. Rendez-vous à 15h. Le début de la cérémonie sera à 16h, suivi d'un cocktail à 17h. Puis le diner commencera à 10h suivi de la soirée dansante. </p>
+      </div>
     </div>
+  </div>
+  <div class="row padding-top-20 padding-bottom-20">
+    <div id="map"></div>
   </div>
 </div>
 
@@ -44,59 +28,47 @@
   <div class="container max-width">
     <div class="row padding-top-20 padding-bottom-20 text-center">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <h1 class="text-center padding-top-20 padding-bottom-20 text-white">Sarnac </h1>
-         <%= link_to("https://www.google.fr/maps/place/5+Chemin+du+Ch%C3%A2teau,+21190+Chassagne-Montrachet/data=!4m2!3m1!1s0x47f2f63c403fcc2f:0x4cf82bc0e69dd999?sa=X&ved=0ahUKEwj13O_E_JXLAhXIthoKHZUYAtsQ8gEIHDAA", html_options = { target: :_blank}) do %>
+        <h1 class="text-center padding-top-20 padding-bottom-20 text-white"> Rendez-vous le dimanche à partir de midi au jardin extraordinaire </h1>
+         <%= link_to("https://www.google.fr/maps/place/Gouziaud,+09300+Lieurac/@42.986849,1.7842766,16z/data=!4m5!3m4!1s0x12af088ca1ee7e1f:0x2652d1c7e2d6dd37!8m2!3d42.986849!4d1.788654", html_options = { target: :_blank}) do %>
         <%= image_tag("sarnac.jpg", class: "img-responsive img-thumbnail img-rounded")%>
         <%end%>
-
-        <div class="padding-top-20 padding-bottom-20 text-center">
-         <p> Adresse : ? </p>
-      </div>
       </div>
     </div>
+  <div class="row padding-top-20 padding-bottom-20">
+    <div id="map2"></div>
+  </div>
   </div>
 </div>
 
 <div class="banner-transition text-center" style="background-image: url('<%= image_path "fond2.png" %>')">
 </div>
 
-<div class="container max-width">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="padding-top-20 padding-bottom-20">
-        <h1 class="text-center">Comment aller de l'un à l'autre ?</h1>
-      </div>
-    </div>
-  </div>
-  <div class="row padding-top-20 padding-bottom-50">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <div class="padding-top-20 padding-bottom-20">
-        <h2 class="text-center">Du lieux pour la Ceremonie à Sarnac </h2>
-      </div>
-      <div class="map-static-2">
-        <span class="map-bg" style="background-image: url(<%= image_path 'mairie-eglise.png' %>)"></span>
-        <a href='https://www.google.fr/maps/dir/Eglise+Saint+Pierre+et+Saint+Paul,+Rue+Belle+Vue,+71150+Cheilly-l%C3%A8s-Maranges/Mairie,+5+Place+de+la+Mairie,+71150+Cheilly-l%C3%A8s-Maranges/@46.8958987,4.6659147,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x47f259d29e2d5a81:0x478615b9ec492219!2m2!1d4.667294!2d46.895256!1m5!1m1!1s0x47f259cd347805f9:0xfa9a5363b541b517!2m2!1d4.6689442!2d46.8968095' target="_blank" class='banner-link'></a>
-      </div>
-    </div>
-  </div>
-</div>
 
-  <div class="banner-transition text-center" style="background-image: url('<%= image_path "fond2.png" %>')">
-</div>
+<%= content_for(:after_js) do %>
+  <%= javascript_tag do %>
 
-<div class="container max-width">
-  <div class="row padding-top-20 padding-bottom-50">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <div class="padding-top-20 padding-bottom-20">
-        <h2 class="text-center">De la cérémonie à Sarnac</h2>
-      </div>
-      <div class="map-static-2">
-        <span class="map-bg" style="background-image: url(<%= image_path 'eglise-chateau.png' %>)"></span>
-        <a href='https://www.google.fr/maps/dir/Eglise+Saint+Pierre+et+Saint+Paul,+Rue+Belle+Vue,+71150+Cheilly-l%C3%A8s-Maranges/Ch%C3%A2teau+de+Chassagne-Montrachet,+Chemin+du+Ch%C3%A2teau,+Chassagne-Montrachet/@46.9139806,4.6707394,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x47f259d29e2d5a81:0x478615b9ec492219!2m2!1d4.667294!2d46.895256!1m5!1m1!1s0x47f2f63c3fd37947:0x982e0feb318a8a73!2m2!1d4.7356155!2d46.9367827' target="_blank" class='banner-link'></a>
-      </div>
-    </div>
-  </div>
-</div>
+      $(document).on('ready', function() {
+        var handler = Gmaps.build('Google');
+        handler.buildMap({ internal: { id: 'map' } }, function(){
+          markers = handler.addMarkers([
+              { "lat": 42.9833183, "lng": 1.7463246 }
+            ]);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+        });
+      })
 
+      $(document).on('ready', function() {
+        var handler = Gmaps.build('Google');
+        handler.buildMap({ internal: { id: 'map2' } }, function(){
+          markers = handler.addMarkers([
+              { "lat": 42.986849, "lng": 1.7842766 }
+            ]);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+        });
+      })
+  <% end %>
+<% end %>
 
 

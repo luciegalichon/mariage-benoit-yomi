@@ -12,6 +12,8 @@
     <hr class="hidden-xs hidden-sm">
     <a href="<%=mariage_path%> " class="navbar-wagon-item navbar-wagon-link">Lieux du mariage</a>
     <hr class="hidden-xs hidden-sm">
+    <a href="<%=ballade_path%> " class="navbar-wagon-item navbar-wagon-link">Que faire dans la région</a>
+    <hr class="hidden-xs hidden-sm">
     <a href="/lieux" class="navbar-wagon-item navbar-wagon-link">Où se loger</a>
     <hr class="hidden-xs hidden-sm">
     <a href="/covoiturages" class="navbar-wagon-item navbar-wagon-link">Comment venir ?</a>
@@ -104,14 +106,12 @@
 
           if ( $(window).scrollTop() >= 100 ) {
             $('.navbar-wagon-height').css("height", 70)
-            $('a.navbar-wagon-brand img').css("height", 50)
             $('a.navbar-wagon-brand img').css("width", 50)
 
           };
 
           if ($(window).scrollTop() < 100) {
             $('.navbar-wagon-height').css("height", 180)
-            $('a.navbar-wagon-brand img').css("height", 150)
             $('a.navbar-wagon-brand img').css("width", 150)
 
           };

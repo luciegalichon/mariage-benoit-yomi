@@ -1,11 +1,11 @@
 //map for google
 
 #map {
-  position: absolute;
-  width: 40%;
-  top: 70px;
-  right: 0px;
-  bottom: 0px;
+  height: 70vh;
+}
+
+#map2 {
+  height: 70vh;
 }
 .sidebar {
   position: absolute;
@@ -27,8 +27,7 @@
 }
 
 .form-group label {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   margin-right: 30px;
   font-weight: 400;
 }

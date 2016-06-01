@@ -2,10 +2,29 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
-@import url(https://fonts.googleapis.com/css?family=Petit+Formal+Script);
-$base-font: 'Raleway', sans-serif;
-$header-font: 'Petit Formal Script', cursive;
+@import url(http://db.onlinewebfonts.com/c/9589fa53c841b622052855a540219a24?family=Cochin+LT);
+
+
+@font-face {font-family: "Cochin LT";
+    src: url("http://db.onlinewebfonts.com/t/9589fa53c841b622052855a540219a24.eot");
+    src: url("http://db.onlinewebfonts.com/t/9589fa53c841b622052855a540219a24.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/9589fa53c841b622052855a540219a24.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/9589fa53c841b622052855a540219a24.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/9589fa53c841b622052855a540219a24.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/9589fa53c841b622052855a540219a24.svg#Cochin LT") format("svg");
+}
+
+$base-font:'Cochin LT';
+$header-font: 'Cochin LT';
+
+@font-face {
+  font-family: "SegoePrint";
+  src: url('911Fonts.com_SegoePrint__-_911fonts.com_fonts_oki4.ttf') format('truetype');
+  // src: url('Rene Bieder - Galano Grotesque Bold.otf?#iefix') format('embedded-opentype'),
+  //      url('Rene Bieder - Galano Grotesque Bold.woff') format('woff'),
+  //      url('Rene Bieder - Galano Grotesque Bold.ttf') format('truetype')
+}
+
 
 // Local fonts (uncomment following lines)
 // @font-face {
@@ -18,8 +37,8 @@ $header-font: 'Petit Formal Script', cursive;
 // $my-font: "Font Name";
 
 // Font-size and line-height
-$base-size: 16px;
-$mini-size: 12px;
+$base-size: 20px;
+$mini-size: 16px;
 $base-height: 1.4;
 $h1-size: 30px;
 $h2-size: 25px;
@@ -31,15 +50,15 @@ $h4-size: 16px;
  * Colors
  * ------------------------------------- */
 // Scheme
-$brand-color: #1943A5;
+$brand-color: lighten(#000, 50%);
 $red: #EE5F5B;
 $blue: #1943A5;
 $yellow: #FDB631;
 $orange: #E67E22;
 $green: #49E9CD;
-//$blue: #ffe9c4;
+//$brand-color: #ffe9c4;
 
-// $blue:#F9CDDA;
+// $brand-color:#F9CDDA;
 $pink:#FFCC96;
 
 

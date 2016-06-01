@@ -43,5 +43,5 @@ source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
   gem 'rails-assets-smoothscroll'
   gem 'rails-assets-swipebox'
-  gem 'rails-assets-countdown'
+  gem 'rails-assets-jquery.countdown'
 end

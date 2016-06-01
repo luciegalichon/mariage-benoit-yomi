@@ -12,22 +12,11 @@
             <div class="row">
               <h1 class="padding-10"> Oluwayomi & Benoit </h1>
               <h1 class="padding-10"> se marient ! </h1>
-              <h1 class="padding-10"> Samedi 27 août 2016 à 15 heures, à Sarnac </h1>
+              <h1 class="padding-10"> Samedi 27 août 2016 à 16 heures, à Sarnac </h1>
             </div>
             <div class="row">
               <div class="padding-20">
-                <div class="col-xs-hidden col-md-6 col-lg-3">
-                  <div class="chart"><span id="days"></span>Jours</div>
-                </div>
-                <div class="col-xs-hidden col-md-6 col-lg-3">
-                  <div class="chart"><span id="hours"></span>Heures</div>
-                </div>
-                <div class="col-xs-hidden col-md-6 col-lg-3">
-                  <div class="chart"><span  id="minutes"></span>Minutes</div>
-                </div>
-                <div class="col-xs-hidden col-md-6 col-lg-3">
-                  <div class="chart"><span id="secondes"></span>Secondes</div>
-                </div>
+                <div id="clock" style="height:200px;"></div>
               </div>
             </div>
                <!-- data-percent="100" -->
@@ -112,8 +101,8 @@
             <div class="avatar-background" style="background-image: url(<%= image_path 'sarnac1.jpg' %>)"></div>
           </div>
         </div>
-        <h3> 15h </h3>
-        <p>Rendez-vous à Sarnac</p>
+        <h3> 16h </h3>
+        <p>Cérémonie humaniste, à Sarnac</p>
       </div>
     </div>
     <div class="col-xs-12 col-md-3">
@@ -123,8 +112,8 @@
             <div class="avatar-background" style="background-image: url(<%= image_path 'sarnac2.jpg' %>)"></div>
           </div>
         </div>
-        <h3> 16h </h3>
-        <p> Cérémonie humaniste, suivie d'un cocktail à 17h à Sarnac</p>
+        <h3> 17h </h3>
+        <p>Cocktail, à Sarnac</p>
       </div>
     </div>
     <div class="col-xs-12 col-md-3">
@@ -135,7 +124,7 @@
           </div>
         </div>
         <h3> 20h </h3>
-        <p> Dîner à Sarnac, suivi d'une soirée dansante</p>
+        <p> Dîner, à Sarnac, suivi d'une soirée dansante</p>
       </div>
     </div>
     <div class="col-xs-12 col-md-3">
@@ -145,8 +134,8 @@
             <div class="avatar-background" style="background-image: url(<%= image_path 'sarnac4.jpg' %>)"></div>
           </div>
         </div>
-        <h3> le lendemain à 12h </h3>
-        <p> Brunch au jardin extraordinaire à Lieurac </p>
+        <h3> 12h - dimanche </h3>
+        <p> Brunch, au jardin extraordinaire à Lieurac </p>
       </div>
     </div>
   </div>
@@ -239,23 +228,16 @@
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
 
-  $('#days').countdown('2016/27/08', function(event) {
-    $(this).html(event.strftime('%D'));
-  });
+    $('#clock').countdown('2016/08/27', function(event) {
+      var $this = $(this).html(event.strftime(''
+      + '<span>%w</span> weeks '
+      + '<span>%d</span> days '
+      + '<span>%H</span> hr '
+      + '<span>%M</span> min '
+      + '<span>%S</span> sec'));
+      });
 
-  $('#hours').countdown('2016/27/08', function(event) {
-      $(this).html(event.strftime('%H'));
-  });
-
-  $('#minutes').countdown('2016/27/08', function(event) {
-    $(this).html(event.strftime('%M'));
-  });
-
-  $('#secondes').countdown('2016/27/08', function(event) {
-    $(this).html(event.strftime('%S'));
-  });
-
-  <% end %>
+      <% end %>
 
   <%= javascript_tag do %>
 

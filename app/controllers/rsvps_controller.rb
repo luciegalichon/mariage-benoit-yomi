@@ -9,15 +9,14 @@ def create
     @rsvp = Rsvp.new(rsvp_params)
 
     if @rsvp.save
-      respond_to do |format|
-        format.html { flash.now[:notice] = "Merci pour votre confirmation !"}
-        format.js  # <-- will render `app/views/covoiturages/create.js.erb`
-      end
+
+        flash.now[:notice] = "Merci pour votre confirmation !"
+        redirect_to root_path
     else
-      respond_to do |format|
-        format.html { render 'home' }
-        format.js  # <-- idem
-      end
+
+        flash.now[:notice] = "Merci de réessayer, cela n'a pas fonctionné"
+        render 'home'
+
     end
 end
 

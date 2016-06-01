@@ -5,5 +5,4 @@
 //= require underscore
 //= require gmaps/google
 //= require swipebox
-//= require jquery.countdown
 //= require_tree.

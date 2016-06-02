@@ -4,5 +4,4 @@
 //= require lightbox
 //= require underscore
 //= require gmaps/google
-//= require swipebox
 //= require_tree.

@@ -14,9 +14,40 @@
               <h1 class="padding-10"> se marient ! </h1>
               <h1 class="padding-10"> Samedi 27 août 2016 à 16 heures, à Sarnac </h1>
             </div>
-            <div class="row">
-              <div class="padding-20">
-                <div id="clock" style="height:200px;"></div>
+            <div class="row padding-bottom-40 padding-top-30">
+              <div class="col-xs-12 col-md-3">
+                <div class="countdown-item">
+                  <div>
+                    <span class="fat" id="days"></span>
+                    <span class="hidden-xs"> jours</span>
+                    <span class="visible-xs">J</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <div class="countdown-item">
+                  <div>
+                    <span class="fat" id="hours"></span>
+                    <span class="hidden-xs"> heures</span>
+                    <span class="visible-xs">H</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <div class="countdown-item">
+                  <div>
+                    <span class="fat" id="minutes"></span>
+                    <span> min</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-3">
+                <div class="countdown-item">
+                  <div>
+                    <span class="fat" id="seconds"></span>
+                    <span> sec</span>
+                  </div>
+                </div>
               </div>
             </div>
                <!-- data-percent="100" -->
@@ -227,12 +258,35 @@
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
-
-  $(function() {
-      $('#clock').countdown({
-          date: "June 7, 2087 15:03:26"
-      });
-  });
+function startTimer(duration, days_div, hours_div, minutes_div, seconds_div) {
+    var timer = duration;
+    setInterval(function () {
+        days = parseInt(timer / (60 * 60 * 24), 10);
+        hours = parseInt((timer / (60 * 60)) % 24, 10);
+        minutes = parseInt((timer / 60) % 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        days_div.text(days);
+        hours_div.text(hours);
+        minutes_div.text(minutes);
+        seconds_div.text(seconds);
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+jQuery(function ($) {
+    var start_date = new Date($.now());
+        end_date = new Date(2016, 7, 27, 16, 0, 0);
+        remainingTime = (end_date.getTime()/1000 - start_date.getTime()/1000);
+        days_div = $('#days');
+        hours_div = $('#hours');
+        minutes_div = $('#minutes');
+        seconds_div = $('#seconds');
+    startTimer(remainingTime, days_div, hours_div, minutes_div, seconds_div);
+});
 
       <% end %>
 
@@ -243,12 +297,6 @@
           fontSize: $('.heart span').css('fontSize') == '75px' ? '50px' : '75px'
       }, 500, animateHeart);
     });
-  <% end %>
-
-  <%= javascript_tag do %>
-    $(function( $ ) {
-        $( '.swipebox' ).swipebox();
-    } )
   <% end %>
 
 <% end %>

@@ -188,19 +188,20 @@
 
     </div>
 
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <%= simple_form_for(@rsvp) do |f| %>
-            <%= f.error_notification %>
-            <%= f.input :mail, label: false, placeholder: 'Votre email' %>
-            <%= f.input :prenom, label: false, placeholder: 'Votre prénom' %>
-            <%= f.input :nom, label: false, placeholder: 'Votre nom' %>
-            <%= f.input :nbpers, label: false, placeholder: 'Combien serez-vous ?' %>
-            <%= f.input :oui, label: 'En cochant la case, vous confirmez que vous serez présents !' %>
-            <%= f.input :commentaire, label: false, placeholder: 'Votre message' %>
-            <%= f.button :submit, 'Valider' %>
-          <% end %>
+   <div class='formrsvp' class="col-xs-12 col-md-8 col-md-offset-2">
+      <%= simple_form_for(@rsvp, remote: :true) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :mail, label: false, placeholder: 'Votre email' %>
+        <%= f.input :prenom, label: false, placeholder: 'Votre prénom' %>
+        <%= f.input :nom, label: false, placeholder: 'Votre nom' %>
+        <%= f.input :nbpers, label: false, placeholder: 'Combien serez-vous ?' %>
+        <%= f.input :oui, label: 'En cochant la case, vous confirmez que vous serez présents !' %>
+        <%= f.input :commentaire, label: false, placeholder: 'Votre message' %>
+        <%= f.button :submit, 'Valider' %>
+      <% end %>
+    </div>
+    <div class='thankyou' class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 
-      <!--End mc_embed_signup-->
     </div>
   </div>
 

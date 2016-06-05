@@ -13,28 +13,32 @@
            <i class="fa fa-heart fa-2x"></i>
           </div>
         </div>
-        <div class="row">
 
-          <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <%= simple_form_for(@rsvp) do |f| %>
-            <%= f.error_notification %>
-            <%= f.input :mail, label: false, placeholder: 'Votre email' %>
-            <%= f.input :prenom, label: false, placeholder: 'Votre prénom' %>
-            <%= f.input :nom, label: false, placeholder: 'Votre nom' %>
-            <%= f.input :nbpers, label: false, placeholder: 'Combien serez-vous ?' %>
-            <%= f.input :oui, label: 'En cochant la case, vous confirmez que vous serez présents !' %>
-            <%= f.input :commentaire, label: false, placeholder: 'Votre message' %>
-            <%= f.button :submit, 'Valider' %>
-          <% end %>
+        <div class="row">
+          <div class='formrsvp' class="col-xs-12 col-md-8 col-md-offset-2">
+            <%= simple_form_for(@rsvp, remote: :true) do |f| %>
+              <%= f.error_notification %>
+              <%= f.input :mail, label: false, placeholder: 'Votre email' %>
+              <%= f.input :prenom, label: false, placeholder: 'Votre prénom' %>
+              <%= f.input :nom, label: false, placeholder: 'Votre nom' %>
+              <%= f.input :nbpers, label: false, placeholder: 'Combien serez-vous ?' %>
+              <%= f.input :oui, label: 'En cochant la case, vous confirmez que vous serez présents !' %>
+              <%= f.input :commentaire, label: false, placeholder: 'Votre message' %>
+              <%= f.button :submit, 'Valider' %>
+            <% end %>
+          </div>
+          <div class='thankyou' class="col-xs-12 col-md-8 col-md-offset-2 text-center">
 
           </div>
         </div>
 
-    <div class="row padding-top-20 padding-bottom-40">
-    <div class= "col-xs-12">
-      <p class = "text-center"> Si vous avez des questions, n'hésitez pas à nous envoyer un mail sur <a class="font-green" href="mailto:benetyomi@gmail.com" target="_top">benetyomi@gmail.com</a>  </p>
+        <div class="row padding-top-20 padding-bottom-40">
+          <div class= "col-xs-12">
+            <p class = "text-center"> Si vous avez des questions, n'hésitez pas à nous envoyer un mail sur <a class="font-green" href="mailto:benetyomi@gmail.com" target="_top">benetyomi@gmail.com</a>  </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
   </div>
 </div>
 <div class="banner-transition text-center" style="background-image: url('<%= image_path "fond2.png" %>')">

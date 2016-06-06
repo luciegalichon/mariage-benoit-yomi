@@ -3,7 +3,7 @@ class LieusController < ApplicationController
 
   def index
     @lieux = Lieu.all
-    @genres = ['Chambre d’hôtes','Gîte','Camping','Hôtel']
+    @genres = ['CHAMBRE D\'HÔTES','GÎTE','CAMPING','HÔTEL']
 
     @markers = Gmaps4rails.build_markers(@lieux) do |lieu, marker|
       @my_lieu = lieu
